@@ -1,7 +1,7 @@
 # Reactive-Store
 Reactive Store library is an easy reactive solution to state management problems in android.
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/Mukuljangir372/Reactive-Store/blob/master/reactive-image.png)
 
 ## Add Reactive-Store to your project
 ### Step 1. Add the JitPack repository to your build file
