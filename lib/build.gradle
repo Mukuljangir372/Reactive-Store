@@ -49,9 +49,9 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
 
-                groupId = 'com.github.mukuljangir372'
+                groupId = 'com.mukuljangir.android'
                 artifactId = 'reactive-store'
-                version = '1.0'
+                version = '1.1'
             }
         }
     }
