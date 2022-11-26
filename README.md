@@ -19,6 +19,6 @@ allprojects {
 ### Step 2. Add the dependency
 ```
 dependencies {
-    implementation 'com.github.mukuljangir372:Reactive-Store:v1.0.0'
+    implementation 'com.github.mukuljangir372:Reactive-Store:v1.2'
 }
 ```
