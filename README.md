@@ -60,9 +60,7 @@ internal class HomeStore : Store<HomeState, HomeEvent>(
 2. Define and Dispatch 
 ```kotlin
 class HomeViewModel() : ViewModel() {
-    private val store = getStore(
-        default = HomeStore()
-    )
+    private val store = getStore(default = HomeStore())
     
     fun getUsers() {
        val users = api.getUsers()
@@ -73,8 +71,16 @@ class HomeViewModel() : ViewModel() {
 ```
 3. Consume State
 ```kotlin
-class HomeActivity: AppCompatActivity() {
-     
+class MainActivity : AppCompatActivity() {
+    private val store = getStore(default = HomeStore())
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        
+        consumeState(store) { state -> 
+           //ui.render()
+        }
+    }
 }
 ```
 ## Add Reactive-Store to your project
