@@ -3,7 +3,7 @@ Reactive Store library is an easy reactive solution to state management problems
 
 ![alt text](https://github.com/Mukuljangir372/Reactive-Store/blob/master/reactive-store-logo.png)
 
-## Reactive State in 2 Steps
+## Reactive State in 3 Steps
 1. Define Reactive Store
 ```kotlin
 internal interface HomeEvent : Event {
@@ -57,8 +57,25 @@ internal class HomeStore : Store<HomeState, HomeEvent>(
 )
 
 ```
-2. Use 
+2. Define and Dispatch 
 ```kotlin
+class HomeViewModel() : ViewModel() {
+    private val store = getStore(
+        default = HomeStore()
+    )
+    
+    fun getUsers() {
+       val users = api.getUsers()
+       val event = HomeEvent.ChangeUsers(users = users)
+       store.dispatch(event)
+    }
+}    
+```
+3. Consume State
+```kotlin
+class HomeActivity: AppCompatActivity() {
+     
+}
 ```
 ## Add Reactive-Store to your project
 ### Step 1. Add the JitPack repository to your build file
