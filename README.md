@@ -63,7 +63,7 @@ internal class HomeStore : Store<HomeState, HomeEvent>(
 ## Add Reactive-Store to your project
 ### Step 1. Add the JitPack repository to your build file
 Add it in your root build.gradle at the end of repositories:
-``` 
+```groovy
 allprojects {
    repositories {
        ...
@@ -72,7 +72,7 @@ allprojects {
 }
 ```
 ### Step 2. Add the dependency
-```
+```groovy
 dependencies {
     implementation 'com.github.mukuljangir372:Reactive-Store:v1.4'
 }
