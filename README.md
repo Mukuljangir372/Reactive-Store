@@ -86,16 +86,16 @@ class MainActivity : AppCompatActivity() {
 ## Add Reactive-Store to your project
 ### Step 1. Add the JitPack repository to your build file
 Add it in your root build.gradle at the end of repositories:
-```groovy
+```kotlin
 allprojects {
    repositories {
-       ...
+       //...
        maven { url 'https://jitpack.io' }
    }
 }
 ```
 ### Step 2. Add the dependency
-```groovy
+```kotlin
 dependencies {
     implementation 'com.github.mukuljangir372:Reactive-Store:v1.4'
 }
